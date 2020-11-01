@@ -11,15 +11,15 @@ function main(params) {
       createdAt: new Date(),
        name: params.name,
        surname: params.surname,
-       id: parms.id,
-       divers_license: parms.divers_license,
-       contact_number: parms.contact_number,
-       address: parms.address,
-       vehicle_make: parms.vehicle_make,
-       vehicle_series_name: parms.vehicle_series_name,
+       id: params.id,
+       drivers_license: params.drivers_license,
+       contact_number: params.contact_number,
+       address: params.address,
+       vehicle_make: params.vehicle_make,
+       vehicle_series_name: params.vehicle_series_name,
        license_plate: params.license_plate,
        colour: params.colour,
-       year: parms.year
+       year: params.year
     }
   };
 }
