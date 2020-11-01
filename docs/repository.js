@@ -11,7 +11,7 @@ const repository = {
       dataType: 'json'
     });
   },
-  // add a single guestbood entry
+  // add a single repository entry
   add(name, surname, id, drivers_license, contact_number, address, vehicle_make, vehicle_series_name, license_plate, colour, year) {
     console.log('Sending',name, surname, id, drivers_license, contact_number, address, vehicle_make, vehicle_series_name, license_plate, colour, year)
     return $.ajax({
@@ -67,7 +67,7 @@ const repository = {
   $(document).on('submit', '#addEntry', function(e) {
     e.preventDefault();
 
-    guestbook.add(
+    repository.add(
 	$('#name').val().trim(),
 	$('#surname').val().trim(),
 	$('#id').val().trim(),
