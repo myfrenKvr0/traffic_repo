@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wakanda Traffic Department - online customer repository</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.min.css">
+</head>
+
+<body>
+  <section class="section">
+    <div class="container">
+      <h1 class="title is-1">
+        Wakanda Traffic Department
+      </h1>
+      <p class="subtitle">
+        Online customer repository
+      </p>
+
+      <div class="columns">
+        <div class="column">
+          <h3 class="title is-3">
+            Current Database
+          </h3>
+          <div id="entries"></div>
+        </div>
+        <div class="column">
+          <h3 class="title is-3">
+            Enter a NEW road user
+          </h3>
+          <form id="addEntry">
+            <div class="field">
+              <label class="label">Name</label>
+              <div class="control">
+                <input class="input" type="text" placeholder="Customer's name" id="name">
+              </div>
+            </div>
+            <div class="field">
+              <label class="label">Surname</label>
+              <div class="control">
+                <input class="input" type="text" placeholder="Customer's surname" id="surname">
+              </div>
+            </div>
+			<div class="field">
+              <label class="label">Identity Number/Passport Number</label>
+              <div class="control">
+                <input class="input" type="text" placeholder="Customer's id or passport number" id="id">
+              </div>
+            </div>
+			<div class="field">
+              <label class="label">Drivers License number</label>
+              <div class="control">
+                <input class="input" type="text" placeholder="Customer's drivers license number" id="drivers_license">
+              </div>
+            </div>
+			<div class="field">
+              <label class="label">Contact number</label>
+              <div class="control">
+                <input class="input" type="text" placeholder="Customer's cellphone number" id="contact_number">
+              </div>
+            </div>
+			<div class="field">
+              <label class="label">Address</label>
+              <div class="control">
+                <input class="input" type="text" placeholder="Customer's residential address" id="address">
+              </div>
+            </div>
+			<div class="field">
+              <label class="label">Vehicle make</label>
+              <div class="control">
+                <input class="input" type="text" placeholder="Make of customer's vehicle" id="vehicle_make">
+              </div>
+            </div>
+			<div class="field">
+              <label class="label">Vehicle series name</label>
+              <div class="control">
+                <input class="input" type="text" placeholder="Series name of customer's vehicle " id="vehicle_series_name">
+              </div>
+            </div>
+			<div class="field">
+              <label class="label">License plate</label>
+              <div class="control">
+                <input class="input" type="text" placeholder="License plate number of customer vehicle " id="license_plate">
+              </div>
+            </div>
+			<div class="field">
+              <label class="label">Colour</label>
+              <div class="control">
+                <input class="input" type="text" placeholder="Colour of customer's vehicle " id="colour">
+              </div>
+            </div>
+			<div class="field">
+              <label class="label">Year</label>
+              <div class="control">
+                <input class="input" type="text" placeholder="Year customer's vehicle was manufactured " id="year">
+              </div>
+            </div>
+            <div class="control">
+              <button class="button is-primary">Save</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script id="entries-template" type="text/x-handlebars-template">
+    {{#each entries}}
+    <div class="box">
+      <article class="media">
+        <div class="media-content">
+          <div class="content">
+            <p>
+              <strong>{{name}}</strong> <strong>{{surname}}</strong>
+              <small>
+			  <br>ID: {{id}}
+				DRIVERS LICENSE: {{divers_license}}
+				CONTACT: {{contact_number}}
+				ADDRESS: {{address}}
+				
+			  <br>VEHICLE MAKE: {{vehicle_make}}
+				VEHICLE SERIES NAME: {{vehicle_series_name}}
+				LICENSE PLATE: {{license_plate}}
+				COLOUR:	{{colour}}
+				YEAR:	{{year}}
+			  </small>
+            </p>
+          </div>
+        </div>
+      </article>
+    </div>
+    {{/each}}
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="repository.js"></script>
+</body>
+
+</html>
