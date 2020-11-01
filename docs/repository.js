@@ -1,7 +1,7 @@
 /**
  * Web application
  */
-const apiUrl = 'https://3e5da97c.us-south.apigw.appdomain.cloud/repository2';
+const apiUrl = 'https://ebf89ece.us-south.apigw.appdomain.cloud/repository';
 const repository = {
   // retrieve the existing repository entries
   get() {
@@ -19,7 +19,7 @@ const repository = {
       url: `${apiUrl}/entries`,
       contentType: 'application/json; charset=utf-8',
       data: JSON.stringify({
-        name,
+        	name,
 		surname,
 		id,
 		drivers_license,
