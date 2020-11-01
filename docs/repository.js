@@ -1,7 +1,7 @@
 /**
  * Web application
  */
-const apiUrl = 'https://3e5da97c.us-south.apigw.appdomain.cloud/repository';
+const apiUrl = 'https://3e5da97c.us-south.apigw.appdomain.cloud/repository2';
 const repository = {
   // retrieve the existing repository entries
   get() {
