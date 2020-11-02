@@ -69,6 +69,7 @@ const repository = {
     if($('#name').length && $('#surname').length){
     	if (confirm ("Customer with the same Name and Surname already exists. Continue to store information?")){
 		alert("Thank you for confirming");
+		
 		repository.add(
 		$('#name').val().trim(),
 		$('#surname').val().trim(),
@@ -93,27 +94,25 @@ const repository = {
 	}
     }
      else{
-	 repository.add(
-	 $('#name').val().trim(),
-	 $('#surname').val().trim(),
-	 $('#id').val().trim(),
-	 $('#drivers_license').val().trim(),
-	 $('#contact_number').val().trim(),
-	 $('#address').val().trim(),
-	 $('#vehicle_make').val().trim(),
-	 $('#vehicle_series_name').val().trim(),
-	 $('#license_plate').val().trim(),
-	 $('#colour').val().trim(),
-	 $('#year').val().trim()
-    	 ).done(function(result) {
-         // reload entries
-         loadEntries();
-         }).error(function(error) {
-         console.log(error);
-         });
+		 repository.add(
+		 $('#name').val().trim(),
+		 $('#surname').val().trim(),
+		 $('#id').val().trim(),
+		 $('#drivers_license').val().trim(),
+		 $('#contact_number').val().trim(),
+		 $('#address').val().trim(),
+		 $('#vehicle_make').val().trim(),
+		 $('#vehicle_series_name').val().trim(),
+		 $('#license_plate').val().trim(),
+		 $('#colour').val().trim(),
+		 $('#year').val().trim()
+		 ).done(function(result) {
+		 // reload entries
+		 loadEntries();
+		 }).error(function(error) {
+		 console.log(error);
+		 });
     }
-
-    
   });
 
   $(document).ready(function() {
