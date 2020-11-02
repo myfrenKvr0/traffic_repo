@@ -22,9 +22,9 @@
       	<div class="columns">
         	<div class="column">
           	<h3 class="title is-3">
-            		Current Database
+            	<img src = "home.gif" alt = "Wakanda image">
+				<a href = "view.html" class = "button" >View Database</a>
          	</h3>
-         	<div id="entries"></div>
         </div>
 	      
         <div class="column">
@@ -107,27 +107,6 @@
     </div>
   </section>
 
-  <script id="entries-template" type="text/x-handlebars-template">
-    {{#each entries}}
-    <div class="box">
-      <article class="media">
-        <div class="media-content">
-          <div class="content">
-            <p>
-              <strong>{{name}}</strong> <strong>{{surname}}</strong>
-              	<small>
-			<p><strong>ID:</strong> {{id}} &nbsp;&nbsp; <strong>DRIVERS LICENSE:</strong> {{drivers_license}} &nbsp;&nbsp; <strong>CONTACT:</strong> {{contact_number}}<br>
-			<strong>ADDRESS:</strong> {{address}}<br>
-			<strong>VEHICLE MAKE:</strong> {{vehicle_make}} &nbsp; <strong>VEHICLE SERIES NAME:</strong> {{vehicle_series_name}} &nbsp; <strong>LICENSE PLATE:</strong> {{license_plate}}<br>
-			<strong>COLOUR:</strong> {{colour}} &nbsp;&nbsp; <strong>YEAR:</strong>  {{year}}</p>
-		</small>
-            </p>
-          </div>
-        </div>
-      </article>
-    </div>
-    {{/each}}
-  </script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
