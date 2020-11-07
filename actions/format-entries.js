@@ -9,6 +9,7 @@ function main(params) {
 	name: row.doc.name,
 	surname: row.doc.surname,
        	id: row.doc.id,
+	gender: row.doc.gender,
        	drivers_license: row.doc.drivers_license,
        	contact_number: row.doc.contact_number,
        	address: row.doc.address,
