@@ -2,7 +2,7 @@
  * Prepare the customer repository entry to be persisted
  */
 function main(params) {
-  if (!params.name || !params.surname || !params.id|| !params.gender || !params.drivers_license || !params.contact_number || !params.address || !params.vehicle_make || !params.vehicle_series_name || !params.license_plate || !params.colour || !params.year) {
+  if (!params.name || !params.comment) {
     return Promise.reject({ error: 'all the fields have not been filled.'});
   }
 
