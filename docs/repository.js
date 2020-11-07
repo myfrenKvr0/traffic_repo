@@ -67,7 +67,7 @@ const repository = {
   // reload entries on success
   $(document).on('submit', '#addEntry', function(e) {
     e.preventDefault();
-    if(repository.($('#name').length) && repository.($('#surname').length)){
+    if($('#name').length && $('#surname').length){
     	if (confirm ("Customer with the same Name and Surname already exists. Continue to store information?")){
 		alert("Thank you for confirming");
 		
