@@ -2,7 +2,7 @@
  * Prepare the customer repository entry to be persisted
  */
 function main(params) {
-  if (!params.name || !params.surname ) {
+  if (!params.name) {
     return Promise.reject({ error: 'all the fields have not been filled.'});
   }
 
