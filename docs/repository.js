@@ -1,7 +1,7 @@
 /**
  * Web application
  */
-const apiUrl = 'https://ebf89ece.us-south.apigw.appdomain.cloud/repository';
+const apiUrl = 'https://c094c5b1.us-south.apigw.appdomain.cloud/repository';
 const repository = {
   // retrieve the existing repository entries
   get() {
@@ -12,8 +12,8 @@ const repository = {
     });
   },
   // add a single repository entry
-  add(name, surname, id, drivers_license, contact_number, address, vehicle_make, vehicle_series_name, license_plate, colour, year) {
-    console.log('Sending',name, surname, id, drivers_license, contact_number, address, vehicle_make, vehicle_series_name, license_plate, colour, year)
+  add(name, surname, id, gender, drivers_license, contact_number, address, vehicle_make, vehicle_series_name, license_plate, colour, year) {
+    console.log('Sending',name, surname, id, gender, drivers_license, contact_number, address, vehicle_make, vehicle_series_name, license_plate, colour, year)
     return $.ajax({
       type: 'PUT',
       url: `${apiUrl}/entries`,
@@ -22,6 +22,7 @@ const repository = {
         	name,
 		surname,
 		id,
+		gender,
 		drivers_license,
 		contact_number,
 		address, vehicle_make,
@@ -74,6 +75,7 @@ const repository = {
 		$('#name').val().trim(),
 		$('#surname').val().trim(),
 		$('#id').val().trim(),
+		$('#gender').val().trim(),
 		$('#drivers_license').val().trim(),
 		$('#contact_number').val().trim(),
 		$('#address').val().trim(),
@@ -98,6 +100,7 @@ const repository = {
 		 $('#name').val().trim(),
 		 $('#surname').val().trim(),
 		 $('#id').val().trim(),
+		 $('#gender').val().trim(),
 		 $('#drivers_license').val().trim(),
 		 $('#contact_number').val().trim(),
 		 $('#address').val().trim(),
