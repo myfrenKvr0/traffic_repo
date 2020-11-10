@@ -67,9 +67,9 @@ const repository = {
 	// reload entries on success
 	$(document).on('submit', '#addEntry', function(e) {
 		e.preventDefault();
-		var test = repository["id"];
-		const hasValue = Object.values(test).includes($('#id').val().trim());
-		if(hasValue == true){
+		var test = repository.get();
+		var i = $('#id').val().trim();
+		if(Object.values(test).includes(i)>-1){
 					if (confirm ("Customer with the same ID already exists. Continue to store information?")){
 						alert("Thank you for confirming");
 						
