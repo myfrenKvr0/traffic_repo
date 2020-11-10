@@ -37,7 +37,7 @@
               </div>
             </div>
 			<div class="control">
-              <button class="button is-primary">Update</button>
+              <button class="button is-primary">Search</button>
             </div>
 			</form id="search">
 			</h4>
@@ -58,19 +58,85 @@
         <div class="media-content">
           <div class="content">
             <p>
-			  <div class="control">
-                <input class="input" type="text" placeholder={{name}} id="name">
+			<div class="column">
+          <form id="updateEntry">
+            <div class="field">
+              <label class="label">Name</label>
+              <div class="control">
+                <input class="input" type="text" value = {{name}} placeholder="Customer's name" id="name">
               </div>
-			  <div class="control">
-                <input class="input" type="text" placeholder={{surname}} id="surname">
+            </div>
+            <div class="field">
+              <label class="label">Surname</label>
+              <div class="control">
+                <input class="input" type="text" value = {{surname}} placeholder="Customer's surname" id="surname">
               </div>
-              	<small>
-			<p><strong>ID:</strong> {{id}} &nbsp;&nbsp; <strong>GENDER:</strong> {{gender}}
-			<strong>DRIVERS LICENSE:</strong> {{drivers_license}} &nbsp;&nbsp; <strong>CONTACT:</strong> {{contact_number}}<br>
-			<strong>ADDRESS:</strong> {{address}}<br>
-			<strong>VEHICLE MAKE:</strong> {{vehicle_make}} &nbsp; <strong>VEHICLE SERIES NAME:</strong> {{vehicle_series_name}} &nbsp; <strong>LICENSE PLATE:</strong> {{license_plate}}<br>
-			<strong>COLOUR:</strong> {{colour}} &nbsp;&nbsp; <strong>YEAR:</strong>  {{year}}</p>
-				</small>
+            </div>
+	     <div class="field">
+              <label class="label">Identity Number/Passport Number</label>
+              <div class="control">
+                <input class="input" type="text" value = {{id}} placeholder="Customer's id or passport number" id="id">
+              </div>
+            </div>
+			<div class="field">
+              <label class="label">Drivers License number</label>
+              <div class="control">
+                <input class="input" type="text" value = {{drivers_license}} placeholder="Customer's drivers license number" id="drivers_license">
+              </div>
+            </div>
+			<div class="field">
+              <label class="label">Contact number</label>
+              <div class="control">
+                <input class="input" type="text" value = {{contact_number}} placeholder="Customer's cellphone number" id="contact_number">
+              </div>
+            </div>
+			<div class="field">
+              <label class="label">Address</label>
+              <div class="control">
+                <input class="input" type="text" value = {{address}} placeholder="Customer's residential address" id="address">
+              </div>
+            </div>
+			<div class="field">
+              <label class="label">Vehicle make</label>
+              <div class="control">
+                <input class="input" type="text" value = {{vehicle_make}} placeholder="Make of customer's vehicle" id="vehicle_make">
+              </div>
+            </div>
+			<div class="field">
+              <label class="label">Vehicle series name</label>
+              <div class="control">
+                <input class="input" type="text" value = {{vehicle_series_name}} placeholder="Series name of customer's vehicle " id="vehicle_series_name">
+              </div>
+            </div>
+			<div class="field">
+              <label class="label">License plate</label>
+              <div class="control">
+                <input class="input" type="text" value = {{license_plate}} placeholder="License plate number of customer vehicle " id="license_plate">
+              </div>
+            </div>
+			<div class="field">
+              <label class="label">Colour</label>
+              <div class="control">
+                <input class="input" type="text" value = {{colour}} placeholder="Colour of customer's vehicle " id="colour">
+              </div>
+            </div>
+			<div class="field">
+              <label class="label">Year</label>
+              <div class="control">
+                <input class="input" type="text" value = {{year}} placeholder="Year customer's vehicle was manufactured " id="year">
+              </div>
+            </div>
+			<div class="field">
+              <label class="label">Year</label>
+              <div class="control">
+                <input class="input" type="text" value = {{_rev}} id="_rev disabled">
+              </div>
+            </div>
+            <div class="control">
+              <button class="button is-primary">update</button>
+            </div>
+          </form>
+        </div>
             </p>
           </div>
         </div>
@@ -81,7 +147,7 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="repository.js"></script>
+  <script src="repository2.js"></script>
 </body>
 
 </html>
