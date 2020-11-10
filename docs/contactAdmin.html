@@ -9,15 +9,43 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.min.css">
 </head>
 
-<form method="post" name="contact_form"
-action="contact-form-handler.php">
-    Your Name:
-    <input type="text" name="name">
-    Email Address:
-    <input type="text" name="email">
-    Message:
-    <textarea name="message"></textarea>
-    <input type="submit" value="Submit">
-</form>
+<body>
+  	<section class="section">
+  	<div class="container">
+      	<h1 class="title is-3"> Wakanda Traffic Department</h1>
+	
+		<p class="subtitle">Online customer repository</p>
 
+      	<div class="columns">
+        	<div class="column">
+          	<h3 class="title is-3">
+            	<img src = "home.gif" alt = "Wakanda image">
+				<a href = "index.html" class = "button">Back to Data entry</a>
+        <a href = "view.html" class = "button">Back to Data view</a>
+         	</h3>
+			</div>
+			<div class = "column">
+			<h3>Contact us</h3>
+			<form
+			  action="https://formspree.io/f/xeqpzqdn"
+			  method="POST"
+			>
+			  <label>
+				Your email:
+				<input type="text" name="_replyto">
+			  </label>
+			  <label>
+				Your message:
+				<textarea name="message"></textarea>
+			  </label>
+
+			  <!-- your other form fields go here -->
+
+			  <button type="submit">Send</button>
+			</form>
+			</div>
+		</div>
+	</div>
+	</section>
+</body>
 </html>
