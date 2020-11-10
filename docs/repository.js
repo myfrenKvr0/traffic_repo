@@ -67,7 +67,8 @@ const repository = {
 	// reload entries on success
 	$(document).on('submit', '#addEntry', function(e) {
 		e.preventDefault();
-		var test = repository["id"];
+		var test = repository.get();
+		test = test["id"];
 		for(var i=0;i<repository.length;i++){
 			
 				if(test[i] == ($('#id'))){
@@ -95,7 +96,7 @@ const repository = {
 							});
 				}
 					else{
-						alert("Information will not be stored")
+						alert("Information will not be stored");
 					}
 				}
 		}
