@@ -67,7 +67,7 @@ const repository = {
   // reload entries on success
   $(document).on('submit', '#updateEntry', function(e) {
     e.preventDefault();
-		repository.add({
+		repository.insert({
 		$('#name').val().trim(),
 		$('#surname').val().trim(),
 		$('#id').val().trim(),
@@ -82,7 +82,7 @@ const repository = {
 		$('#year').val().trim()
 	    },$('#_rev').val().trim()).done(function(result) {
 	      	// reload entries
-	      	loadEntries();
+	      	loadEntry();
 	    	}).error(function(error) {
 	      	console.log(error);
 	    	});
@@ -90,6 +90,6 @@ const repository = {
 
   $(document).ready(function() {
     prepareTemplates();
-    loadEntries();
+    loadEntry();
   });
 })();
