@@ -67,11 +67,9 @@ const repository = {
 	// reload entries on success
 	$(document).on('submit', '#addEntry', function(e) {
 		e.preventDefault();
-		var test = repository.get();
-		test = test["id"];
-		for(var i=0;i<repository.length;i++){
-			
-				if(test[i] == ($('#id'))){
+		var test = repository["id"];
+		const hasValue = Object.values(test).includes($('#id').val().trim());
+		if(hasValue == true){
 					if (confirm ("Customer with the same ID already exists. Continue to store information?")){
 						alert("Thank you for confirming");
 						
@@ -96,9 +94,8 @@ const repository = {
 							});
 				}
 					else{
-						alert("Information will not be stored");
+						alert("Information will not be stored")
 					}
-				}
 		}
 		else{
 			repository.add(
