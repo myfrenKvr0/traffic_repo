@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Wakanda Traffic Department - online customer repository</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.min.css">
+</head>
+
+<body>
+  	<section class="section">
+  	<div class="container">
+      	<h1 class="title is-3"> Wakanda Traffic Department</h1>
+	
+		<p class="subtitle">Online customer repository</p>
+
+      	<div class="columns">
+        	<div class="column">
+          	<h3 class="title is-3">
+            	<img src = "home.gif" alt = "Wakanda image">
+				<a href = "index.html" class = "button">Back to Data entry</a>
+        <a href = "view.html" class = "button">Back to Data view</a>
+         	</h3>
+          <h4><form id="search">
+            <div class="field">
+              <label class="label">Name</label>
+              <div class="control">
+                <input class="input" type="text" placeholder="Customer's name" id="name">
+              </div>
+            </div>
+            <div class="field">
+              <label class="label">Surname</label>
+              <div class="control">
+                <input class="input" type="text" placeholder="Customer's surname" id="surname">
+              </div>
+            </div>
+			<div class="control">
+              <button class="button is-primary">Update</button>
+            </div>
+			</form id="search">
+			</h4>
+        </div>
+	    
+        	<div class="column">
+				<h3 class="title is-3"> Edit Customer: </h3>
+				<div id="entry"></div>
+			</div>
+		</div>
+	</div>		
+	</section>
+
+  <script id="entry-template" type="text/x-handlebars-template">
+    {{#entry}}
+    <div class="box">
+      <article class="media">
+        <div class="media-content">
+          <div class="content">
+            <p>
+			  <div class="control">
+                <input class="input" type="text" placeholder={{name}} id="name">
+              </div>
+			  <div class="control">
+                <input class="input" type="text" placeholder={{surname}} id="surname">
+              </div>
+              	<small>
+			<p><strong>ID:</strong> {{id}} &nbsp;&nbsp; <strong>GENDER:</strong> {{gender}}
+			<strong>DRIVERS LICENSE:</strong> {{drivers_license}} &nbsp;&nbsp; <strong>CONTACT:</strong> {{contact_number}}<br>
+			<strong>ADDRESS:</strong> {{address}}<br>
+			<strong>VEHICLE MAKE:</strong> {{vehicle_make}} &nbsp; <strong>VEHICLE SERIES NAME:</strong> {{vehicle_series_name}} &nbsp; <strong>LICENSE PLATE:</strong> {{license_plate}}<br>
+			<strong>COLOUR:</strong> {{colour}} &nbsp;&nbsp; <strong>YEAR:</strong>  {{year}}</p>
+				</small>
+            </p>
+          </div>
+        </div>
+      </article>
+    </div>
+    {{/each}}
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="repository.js"></script>
+</body>
+
+</html>
