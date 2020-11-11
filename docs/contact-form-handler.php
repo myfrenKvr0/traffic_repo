@@ -23,8 +23,8 @@ if( empty($errors))
 {
 	$to = $myemail; 
 	$email_subject = "Contact form submission: $name";
-	$email_body = "You have received a new message. ".
-	" Here are the details:\n Name: $name \n Email: $email_address \n Message \n $message"; 
+	$email_body = "You have received a new Query. ".
+	" Here are the details:\n Name: $name \n Email: $email_address \n Query \n $message"; 
 	
 	$headers = "From: $myemail\n"; 
 	$headers .= "Reply-To: $email_address";
