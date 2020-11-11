@@ -11,6 +11,8 @@ body {
   align-items: center;
   background-image: url("image-3.jpeg");
   background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 #main-holder {
