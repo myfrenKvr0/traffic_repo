@@ -69,8 +69,9 @@ const repository = {
 		e.preventDefault();
 		var test = repository.get();
 		var i = $('#id').val().trim();
-		if(Object.values(test).includes(i)>-1){
-					if (confirm ("Customer with the same ID already exists. Continue to store information?")){
+		var j = $('#license_plate').val().trim();
+		if(Object.values(test).includes(i)>-1 && Object.values(test).includes(j)>-1){
+					if (confirm ("Customer with the same ID and Vehicle plate is already registered. Continue to store information?")){
 						alert("Thank you for confirming");
 						
 						repository.add(
