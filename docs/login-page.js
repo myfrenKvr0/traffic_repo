@@ -9,7 +9,7 @@ loginButton.addEventListener("click", (e) => {
 
     if (username === "wakanda" && password === "FOREVER") {
         alert("You have successfully logged in.");
-        location.replace("https://myfrenkvr0.github.io/traffic_repo/");
+        location.replace("https://myfrenkvr0.github.io/traffic_repo/home.html");
     } else {
         loginErrorMsg.style.opacity = 1;
     }
